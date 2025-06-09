@@ -27,7 +27,8 @@ This demonstrates the core MapReduce paradigm of the Multiverse model in action.
 
 
 <div align="center">
-  <video controls src="assets/demo.mp4" width="80%">
+  <video controls src="https://github.com/Multiverse4FM/Multiverse/raw/refs/heads/main/assets/demo.mp4" width="80%">
+    Your browser does not support the video tag.
   </video>
 </div>
 
@@ -74,3 +75,4 @@ If you find our work useful for your research, please consider citing our papers
       year={2025},
       journal={arXiv preprint arXiv:XXXX.XXXXX}
 }
+```
