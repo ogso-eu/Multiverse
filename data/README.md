@@ -1,41 +1,58 @@
-# Data Generation for Multiverse
+# Data Generation for multiverse-1k.jsonl
 
-This document explains how to generate the `multiverse-1k.jsonl` dataset from a source `1.1k.jsonl` file.
+Data section outlines the process for generating the `Multiverse-1K` dataset. The generation process begins with the `simplescaling/s1K-1.1` dataset and involves a series of sequential scripts to transform and refine the data.
 
-## Conversion Steps
+## Prerequisites
 
-To convert the data, you need to run a series of scripts in a specific order. Before you begin, make sure your source file, `1k.jsonl`, is placed in this directory.
+Before initiating the data generation process, you must first acquire the `simplescaling/s1K-1.1` dataset. Once obtained, rename the file to `1.1k.jsonl` and place it in the root directory of this project. You can use follow the step 1 to collect data.
 
-Then, execute the following steps sequentially.
+## Data Generation Pipeline
 
-## Step 0: Collect 1.1k dataset
-In this step we collect the original 1.1k dataset for further processing.
+The conversion from the source `1.1k.jsonl` file to the final `multiverse-1k.jsonl` dataset is accomplished by executing a series of scripts in the specified order. Each step builds upon the output of the previous one.
+
+### Step 1: Initial Data Collection
+
+This initial step gathers the source `1.1k.jsonl` dataset to prepare it for processing.
+
 ```bash
 bash run/collect.sh
 ```
 
-## Step 1: Initial Processing
+### Step 2: Extracting Reasoning Structures
 
-This step performs the first transformation on the source data. We use the LLMs to get the reasoning structure and potential parallel groups.
+In this step, the initial `1.1k.jsonl` data is processed using Large Language Models (LLMs). The primary goal is to extract the underlying reasoning structures and identify potential parallel groupings within the data.
 
 ```bash
 bash run/step1.sh
 ```
 
-## Step 2: Intermediate Processing
-This step continues the data transformation. With the structure of step 1 we refill the structure to get the new reasoning chain with map-reduce paradigm.
+### Step 3: Reconstructing Reasoning Chains
+
+With the foundational structure from the previous step, this script applies a map-reduce paradigm to refill and reconstruct the reasoning chains. This creates a more detailed and structured representation of the reasoning process.
+
 ```bash
 bash run/step2.sh
 ```
 
-## Step 3: Parse and Structure
-This step continues the data transformation process. We'll parse the reasoning chains into XML files and then filter for quality data using both a content checker and a parser checker. Any data that fails these checks will be passed back to Steps 1-3 for an additional round of processing.
+### Step 4: Parsing and Quality Assurance
+
+This step focuses on structuring and validating the generated data. The script parses the reasoning chains into XML format. Following the parsing, both a content checker and a parser checker are used to filter for high-quality data. Any data that does not meet the quality standards is cycled back to Step 2 for reprocessing.
+
 ```bash
 bash run/parse.sh
 ```
 
-## Step 4: Refine
-In this step we fine the data to improve data quality.
+### Step 5: Final Refinement
+
+The last step in the pipeline is to refine the data to further enhance its quality. The output of `step3.sh` constructs the `Multiverse-1K` dataset.
+
 ```bash
 bash run/step3.sh
+```
+
+## Training data
+
+To convert `Multiverse-1K` data to the training data prepared for the next section, please run:
+```bash
+bash run/train_data.sh
 ```
