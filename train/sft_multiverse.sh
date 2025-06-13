@@ -33,7 +33,7 @@ torchrun --nproc-per-node ${gpu_count} --master_port 12345 \
     --weight_decay=${weight_decay} \
     --adam_beta1=0.9 \
     --adam_beta2=0.95 \
-    --output_dir="ckpts/multiverse-${uid}" \
+    --output_dir="ckpts/Multiverse-${uid}" \
     --push_to_hub=${push_to_hub} \
     --save_only_model=True \
     --gradient_checkpointing=True \

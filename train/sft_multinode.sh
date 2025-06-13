@@ -17,7 +17,7 @@ torchrun \
 --rdzv_backend=c10d \
 --rdzv_conf='read_timeout=420' \
 --rdzv_endpoint=$REPLICA_HOSTNAME:29401 \
-train/sft.py \
+train/sft_multiverse.py \
 --per_device_train_batch_size=${micro_batch_size} \
 --per_device_eval_batch_size=${micro_batch_size} \
 --gradient_accumulation_steps=${gradient_accumulation_steps} \
@@ -37,8 +37,8 @@ train/sft.py \
 --weight_decay 1e-4 \
 --adam_beta1 0.9 \
 --adam_beta2 0.95 \
---output_dir="ckpts/s1_${uid}" \
---hub_model_id="simplescaling/s1-${uid}" \
+--output_dir="ckpts/Multiverse_${uid}" \
+--hub_model_id="Multiverse4FM/Multiverse-${uid}" \
 --push_to_hub=True \
 --hub_always_push=True \
 --num_train_epochs ${epochs} \

@@ -38,7 +38,7 @@ echo "Number of nodes: $nnodes"
 echo "Number of GPUs per node: $gpu_count"
 echo "Head node IP: $head_node_ip"
 # Launch distributed training using srun
-run_name="qwen_${train_dataset_name}_bs${batch_size}_lr${lr}_epoch${epochs}_wd${weight_decay}_${uid}"
+run_name="Multiverse_${uid}"
 torchrun \
     --nnodes=$nnodes \
     --nproc_per_node=$gpu_count \
