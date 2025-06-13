@@ -15,9 +15,9 @@ Carnegie Mellon University<sup>1</sup>, Nvidia<sup>2</sup>
 </div>
 <br>
 
-## TL;DR
+<!-- ## TL;DR
 
----
+--- -->
 
 ## 🎬 Demo
 
