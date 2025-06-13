@@ -11,12 +11,12 @@ Carnegie Mellon University<sup>1</sup>, Nvidia<sup>2</sup>
 </div>
 
 <div align="center">
-[<a href="https://arxiv.org/abs/2506.05333">Paper</a>] | [<a href="https://infini-ai-lab.github.io/Kinetics/">Blog</a>]
+[<a href="https://arxiv.org/abs/2506.09991">Paper</a>] | [<a href="https://multiverse4fm.github.io/">Blog</a>]
 </div>
 <br>
 
 ## TL;DR
-<!-- TODO: ADD TL:DR -->
+
 ---
 
 ## 🎬 Demo
@@ -26,15 +26,15 @@ The following demo showcases a Multiverse model solving a reasoning problem. Obs
 This demonstrates the core MapReduce paradigm of the Multiverse model in action.
 
 
-<div align="center">
-  <video controls src="https://github.com/Multiverse4FM/Multiverse/raw/refs/heads/main/assets/demo.mp4" width="80%">
-    Your browser does not support the video tag.
-  </video>
-</div>
+![Demo of Multiverse reasoning inference](assets/demo.gif)
 
 ## 🏛️ Repository Structure
 
-The repository is organized as follows. Each of the core directories (`data`, `train`, `inference`) contains a detailed `README.md` with further instructions.
+This repository provides the complete, end-to-end workflow for the **Multiverse model**. Our structure is organized as a sequential pipeline to guide you through every step:
+
+**🗂️ `data`** → **📈 `train`** → **🚀 `inference`**
+
+Each of these core directories represents a key stage in the machine learning lifecycle and contains its own detailed `README.md` with further instructions.
 
 ```
 Multiverse
@@ -57,12 +57,13 @@ Multiverse
 
 - **`training/`**: Contains the code for fine-tuning a base Large Language Model into a Multiverse model. This directory implements the **Multiverse Attention** algorithm, enabling the model to learn how to split, process, and merge tasks.
 
-- **`inference/`**: Contains the **Multiverse Engine**, a high-performance inference server based on SGLang. It features a dedicated scheduler that dynamically switches between sequential and parallel generation, allowing for the significant speedups demonstrated in our paper.
+- **`inference/`**: Contains the **Multiverse Engine**, a high-performance inference server based on SGLang. It features a dedicated scheduler that dynamically switches between sequential and parallel generation, allowing for the significant speedups demonstrated in our paper. Despite the engine, we also import the lighteval code for evaluation.
 
-## 📝 Todo List
+<!-- ## 📝 Todo List
 
 
 - [ ] Release Multiverse
+- [ ] f -->
 
 ## 📜 Citation
 
