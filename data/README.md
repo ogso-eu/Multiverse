@@ -50,9 +50,14 @@ The last step in the pipeline is to refine the data to further enhance its quali
 bash run/step3.sh
 ```
 
-## Training data
+### Step 6(Optional): Training data
 
 To convert `Multiverse-1K` data to the training data prepared for the next section, please run:
 ```bash
 bash run/train_data.sh
 ```
+
+## Acknowledgements and Terms of Use
+The data in Multiverse was generated using the Google Gemini API. The use of this AI model is subject to the [Google AI API Terms of Service](https://ai.google.dev/terms).
+
+**Important Note for Users**: If you use the code in this repository to generate new data, you will be making calls to the Gemini API. Please ensure you have reviewed, and are in compliance with, the linked terms of service before running any data generation scripts.
