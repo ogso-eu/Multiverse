@@ -1,6 +1,8 @@
 # Training
 
-This training setup is adapted from the [s1: Simple test-time scaling](https://github.com/simplescaling/s1) repository.
+This training setup is adapted from the [s1: Simple test-time scaling](https://github.com/simplescaling/s1) repository. In the training section we provide the code to train:
+1. `Multiverse-32B`: the Multiverse reasoning model applying Multiverse Attention mechanism which enables its splist/merge ability during inference, trained by `Multiverse 1K` dataset.
+2. `Autoregressive-32B`: the AR reasoning model trained by `Multiverse 1K` dataset.
 
 ## Environment
 
@@ -10,20 +12,15 @@ To train `Multiverse-32B`/`Autoregressive-32B`, we recommend 16 A/H100 GPUs (i.e
 
 ### Quick Start
 
-1.  Clone the repository and navigate into it:
+1.  With prepared training data in Data section, you can train `Multiverse-32B` with following command.
     ```bash
-    git clone https://github.com/simplescaling/s1.git
-    cd s1
+    bash sft_multiverse.sh
     ```
-2.  Install the required dependencies:
+2.  With prepared training data in Data section, you can train `Autoregressive-32B` with following command.
     ```bash
-    pip3 install -r requirements.txt
+    bash sft_autoregressive.sh
     ```
-3.  Start the training script:
-    ```bash
-    bash train/sft.sh
-    ```
-    If you are on a SLURM cluster, you may want to use `train/launch.sh` after configuring it for your setup.
+3. We provide the original slurm/multinode support for the training in `sft_multinode.sh` and `sft_slurm.sh`.
 
 ### Notes
 *   If you encounter an out-of-memory (OOM) issue with 8 GPUs, consider enabling gradient checkpointing by adding `--gradient_checkpointing=True` to `train/sft.sh`.
