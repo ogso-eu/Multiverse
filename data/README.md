@@ -1,4 +1,4 @@
-# Data Generation for multiverse-1k.jsonl
+# Data Generation for Multiverse 1K
 
 Data section outlines the process for generating the `Multiverse-1K` dataset. The generation process begins with the `simplescaling/s1K-1.1` dataset and involves a series of sequential scripts to transform and refine the data.
 
@@ -8,7 +8,7 @@ Before initiating the data generation process, you must first acquire the `simpl
 
 ## Data Generation Pipeline
 
-The conversion from the source `1.1k.jsonl` file to the final `multiverse-1k.jsonl` dataset is accomplished by executing a series of scripts in the specified order. Each step builds upon the output of the previous one.
+The conversion from the source `1.1k.jsonl` file to the final `Multiverse-1K` dataset is accomplished by executing a series of scripts in the specified order. Each step builds upon the output of the previous one.
 
 ### Step 1: Initial Data Collection
 
