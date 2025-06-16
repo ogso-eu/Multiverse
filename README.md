@@ -31,11 +31,9 @@ Multiverse
 │
 ├── train
 │   └── README.md
-│   └── src
 │
 ├── inference/
 │   └── engine
-|   └── eval
 |   └── README.md
 │
 └── README.md
@@ -46,6 +44,8 @@ Multiverse
 - **`training/`**: Implements the **Multiverse Attention** algorithm for the efficient training of Multiverse models. We also includes the code for AR baselines
 
 - **`inference/`**: Features the **Multiverse Engine** implementation, a high-performance inference server optimized for Multiverse models.
+
+For detailed documentation and usage instructions, please refer to the README.md files in each directory.
 
 ## 📝 Todo List
 
