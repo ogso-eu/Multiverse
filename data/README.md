@@ -1,4 +1,9 @@
-# Data Generation for Multiverse 1K
+<div align="center">
+<h1><img src="../assets/multiverse-logo.png" height="40px" align="top"/> Multiverse Curator
+</h1>
+</div>
+
+# Description
 
 Data section outlines the process for generating the `Multiverse-1K` dataset. The generation process begins with the `simplescaling/s1K-1.1` dataset and involves a series of sequential scripts to transform and refine the data.
 
