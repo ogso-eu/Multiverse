@@ -37,7 +37,7 @@ train/sft_multiverse.py \
 --weight_decay 1e-4 \
 --adam_beta1 0.9 \
 --adam_beta2 0.95 \
---output_dir="ckpts/Multiverse_${uid}" \
+--output_dir="ckpts/Multiverse-${uid}" \
 --hub_model_id="Multiverse4FM/Multiverse-${uid}" \
 --push_to_hub=True \
 --hub_always_push=True \
