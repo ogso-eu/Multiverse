@@ -1,4 +1,9 @@
-# Training
+<div align="center">
+<h1><img src="../assets/multiverse-logo.png" height="40px" align="top"/> Multiverse Training
+</h1>
+</div>
+
+# Description
 
 This training setup is adapted from the [s1: Simple test-time scaling](https://github.com/simplescaling/s1) repository. In the training section we provide the code to train:
 1. `Multiverse-32B`: the Multiverse reasoning model applying Multiverse Attention mechanism which enables its splist/merge ability during inference, trained by `Multiverse 1K` dataset.
