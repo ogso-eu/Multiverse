@@ -1,4 +1,9 @@
-# Multiverse Inference
+<div align="center">
+<h1><img src="../assets/multiverse-logo.png" height="40px" align="top"/> Multiverse Inference
+</h1>
+</div>
+
+# Description
 
 This directory contains the inference implementation for Multiverse models.
 
